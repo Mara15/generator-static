@@ -1,0 +1,11 @@
+@import 'shared';
+@import '../../bower_components/bootstrap/scss/reboot';
+
+h1, h2, h3, h4, h5, h6 {
+  @include my(0);
+}
+
+body {
+  overflow-x: hidden;
+  @include font;
+}

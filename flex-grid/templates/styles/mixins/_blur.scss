@@ -1,0 +1,9 @@
+$blur-size: 5px;
+
+@mixin blur {
+  -webkit-filter: blur($blur-size);
+  -moz-filter: blur($blur-size);
+  -o-filter: blur($blur-size);
+  -ms-filter: blur($blur-size);
+  filter: blur($blur-size);
+}

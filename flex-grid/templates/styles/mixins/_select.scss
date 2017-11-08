@@ -1,0 +1,121 @@
+@mixin select-size($height: 50px, $border-width: 1px, $font-size: 16px) {
+  $internal-height: ($height - ($border-width * 2));
+
+  .Select {
+    .Select-control {
+      height: $height;
+      display: block;
+    }
+
+    // placeholder
+    .Select-placeholder,
+    .Select-control .Select-value {
+      line-height: $height !important;
+      font-size: $font-size !important;
+    }
+
+    // the <input> element users type in
+
+    .Select-input {
+      // inherits `display: inline-block` from "react-input-autosize"
+      height: $height;
+
+      > input {
+        padding: (($internal-height - $font-size) / 2 - 1) 0; /* For IE 8 compatibility */
+        line-height: normal;
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+@mixin select-theme($color: $white, $background: $black, $border-color: $background) {
+  .Select-control {
+    background-color: $background;
+    border-color: $border-color;
+    color: $color;
+
+    &:hover {
+      box-shadow: 0 1px 0 transparentize($background, .94);
+    }
+  }
+
+  .is-open > .Select-control {
+    background: $background;
+    border-color: $border-color;
+
+    // flip the arrow so its pointing up when the menu is open
+    .Select-arrow {
+      border-color: transparent transparent $color;
+    }
+  }
+
+  .is-focused:not(.is-open) > .Select-control {
+    border-color: $border-color;
+    box-shadow: 0 1px 0 transparentize($background, .94);
+  }
+
+  // placeholder
+  .Select-placeholder,
+  .Select--single > .Select-control .Select-value {
+    color: $color;
+  }
+
+  .has-value.Select--single > .Select-control .Select-value,
+  .has-value.is-pseudo-focused.Select--single > .Select-control .Select-value {
+    @include pr(4);
+
+    .Select-value-label {
+      color: $color;
+    }
+    a.Select-value-label {
+      &:hover,
+      &:focus {
+        color: $color;
+      }
+    }
+  }
+
+  .Select-clear-zone {
+    color: $color;
+
+    &:hover {
+      color: $color;
+    }
+  }
+
+  .Select-arrow {
+    border-color: $color transparent transparent;
+  }
+
+  .is-open .Select-arrow,
+  .Select-arrow-zone:hover > .Select-arrow {
+    border-top-color: $color;
+  }
+
+  .Select-menu-outer {
+    background-color: $background;
+    border: 1px solid $border-color;
+    border-top-color: mix($background, $border-color, 50%);
+    box-shadow: 0 1px 0 transparentize($background, .94);
+  }
+
+  .Select-option {
+    background-color: $background;
+    color: $color;
+
+    &.is-selected {
+      background-color: darken($background, 20%);
+      color: $color;
+    }
+
+    &.is-focused {
+      background-color: darken($background, 20%);
+      color: $color;
+    }
+  }
+
+  .Select-noresults {
+    color: $color;
+  }
+}

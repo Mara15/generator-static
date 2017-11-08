@@ -1,5 +1,5 @@
 {
-  "name": "generator-webapp",
+  "name": "generator-static",
   "version": "3.0.1",
   "description": "Scaffold out a front-end web app",
   "license": "BSD-2-Clause",
@@ -28,6 +28,7 @@
   "dependencies": {
     "chalk": "^1.0.0",
     "command-exists": "^1.2.2",
+    "copy-dir": "^0.3.0",
     "generator-jasmine": "^1.0.0",
     "generator-mocha": "^1.0.0",
     "mkdirp": "^0.5.1",

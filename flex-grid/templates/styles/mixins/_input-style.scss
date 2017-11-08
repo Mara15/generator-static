@@ -1,0 +1,11 @@
+@mixin field {
+  @include flex(column);
+  width: 100%;
+  @include mb(0);
+
+  .label {
+    @include font(base, $white);
+    font-size: 14px;
+    @include mb(1);
+  }
+}

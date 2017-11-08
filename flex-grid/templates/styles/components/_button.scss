@@ -1,0 +1,87 @@
+$btn-border-width: 1px;
+$btn-border-radius: $border-radius;
+$btn-icon-size: 1.25em;
+$btn-shadow: 0 1px 5px transparentize($black, .95);
+
+@mixin btn {
+  @include inline-flex(row, center, center);
+  @include font(btn);
+  border: $btn-border-width solid;
+  @include px(2);
+  @include transitionStyles(color background-color border-color box-shadow, $function: ease);
+  cursor: pointer;
+  user-select: none;
+  appearance: none !important;
+  text-align: center;
+  overflow: visible;
+  border-radius: $btn-border-radius;
+
+  .icon {
+    @include svg-icon(transparent, $btn-icon-size);
+  }
+
+  &.circle {
+    position: relative;
+    border-radius: 50%;
+    @include p(0);
+
+    svg {
+      @include size(10px);
+      @include absolute(left 50% top 50%);
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @include hover-focus-active {
+    text-decoration: none;
+    outline: none;
+  }
+
+  &:disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin btn-variant($color, $bg-color, $border-color: $bg-color, $shadow-color: false) {
+  &,
+  &:not([href]):not([tabindex]):not(:disabled) {
+    background-color: $bg-color;
+    border-color: $border-color;
+    color: $color;
+  }
+
+  @if $shadow-color {
+    box-shadow: 0 2px 10px transparentize($shadow-color, .5);
+  }
+
+  .icon {
+    fill: $color;
+    stroke: $color;
+  }
+
+  &:disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: transparentize($bg-color, .8);
+      border-color: transparent;
+    }
+  }
+}
+
+@mixin button-link {
+  background-color: transparent;
+  border-color: transparent;
+  padding: 0;
+  cursor: pointer;
+
+  @include hover-focus {
+    outline: none;
+  }
+}

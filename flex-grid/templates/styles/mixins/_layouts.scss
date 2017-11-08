@@ -1,0 +1,22 @@
+$header-height: 125px;
+$header-height-mobile: 100px;
+
+@mixin layout-default {
+  .layout {
+    @include flex(column);
+    flex: 1 1 auto;
+  }
+
+  .header,
+  .footer {
+    flex: 0 0 auto;
+  }
+
+  .header {
+    z-index: z('header');
+  }
+
+  .contentWrap {
+    flex: 1 1 auto;
+  }
+}

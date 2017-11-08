@@ -1,0 +1,217 @@
+// Palette
+$black: #000;
+$white: #fff;
+$gray: #9299a9;
+$gray-light: #aeb0b1;
+$gray-lighten: #e5e5e5;
+$gray-dark: #4a4a4a;
+$gray-darken: #65636e;
+
+$gray-border: #dfdfdf;
+
+$brand-warning: orange;
+$brand-success: green;
+$brand-danger: red;
+$brand-primary: blue;
+$brand-primary-dark: brown;
+
+// Bootstrap reboot
+$enable-hover-media-query: false;
+
+$font-family-base: 'Helvetica', sans-serif;
+$font-size-base: 16px; // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
+$font-weight-base: normal;
+$line-height-base: $font-size-base;
+$dt-font-weight: $font-weight-base;
+
+$body-color: $black;
+$body-bg: $white;
+$text-muted: $gray-light;
+
+$link-color: $brand-primary-dark;
+$link-decoration: none;
+$link-hover-color: $link-color;
+$link-hover-decoration: underline;
+
+$table-cell-padding: 0;
+$paragraph-margin-bottom: 0;
+
+// Breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1300px,
+);
+
+// Grid
+$grid-columns: 12;
+$grid-fluid: false;
+$grid-gutter-widths: (
+  xxl: 30px,
+);
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+  xl: 1140px,
+  xxl: 1280px,
+);
+
+// Positioning
+$z-indexes: (
+  'header',
+  'content',
+);
+
+// Typography
+$font-variants: (
+  md: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 18px,
+      font-weight: 400,
+      line-height: 26px,
+    ),
+  ),
+  base: (
+    base: (
+      font-family: $font-family-base,
+      font-size: $font-size-base,
+      font-weight: 400,
+      line-height: 20px,
+    )
+  ),
+  sm: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 15px,
+      font-weight: 400,
+      line-height: 20px,
+    ),
+  ),
+  xs: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 12px,
+      font-weight: 400,
+      line-height: 15px,
+    ),
+  ),
+  h1: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 36px,
+      font-weight: 700,
+      line-height: 50px,
+    ),
+  ),
+  h2: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 27px,
+      font-weight: 700,
+      line-height: 37px,
+    )
+  ),
+  h3: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 24px,
+      font-weight: 700,
+      line-height: 35px,
+    ),
+  ),
+  h4: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 22px,
+      font-weight: 700,
+      line-height: 27px,
+    ),
+  ),
+  h5: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 18px,
+      font-weight: 700,
+      line-height: 23px,
+    ),
+  ),
+  h6: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 16px,
+      font-weight: 700,
+      line-height: 20px,
+    ),
+  ),
+  btn: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 12px,
+      font-weight: 700,
+    ),
+  ),
+  form: (
+    base: (
+      font-family: $font-family-base,
+      font-size: 12px,
+      line-height: 15px,
+      font-weight: 400,
+    ),
+  ),
+);
+
+$form-element-height: 36px;
+
+// Borders
+$border-radius-sm: 2px;
+$border-radius: 4px;
+$border-width: 1px;
+$border-color: transparentize($brand-primary-dark, .9);
+$box-shadow: 0 20px 54px $border-color;
+$box-shadow-sm: 0 0 15px $border-color;
+$box-shadow-xs: 0 1px 5px 0 $border-color;
+
+// Transitions
+$transition-duration: .2s;
+$transition-timing-function: ease-in-out;
+$transition-delay: 0s;
+
+// Input
+$input-color: $black;
+$input-placeholder-color: $gray-light;
+$input-bg: $white;
+$input-border-width: 1px;
+$input-border-color: transparentize($gray-light, .5);
+$input-border-radius: $border-radius;
+$input-box-shadow: none;
+$input-padding-y: 4px;
+$input-padding-x: 10px;
+$input-height: $form-element-height;
+$input-disabled-bg: #f0f0f0;
+$input-focus-color: $input-color;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $input-border-color;
+$input-focus-box-shadow: $input-box-shadow;
+
+// Textarea
+$textarea-resizable: true;
+$textarea-resizable-direction: vertical;
+
+// Forms error
+$input-error-color: $brand-danger;
+$input-error-bg: $input-bg;
+$input-error-border-color: $brand-danger;
+$input-error-box-shadow: $input-box-shadow;
+$input-error-message-color: $brand-danger;
+$color-success: $brand-success;
+
+
+//z-indexes
+$header-z-index: 1000;
+$modal-z-index: 2000;
